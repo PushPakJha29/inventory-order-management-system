@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
 
 # Load environment variables
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:postgres@localhost:5432/inventory_db")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 # SQLAlchemy 1.4+ deprecates 'postgresql://' prefix in favor of 'postgresql+psycopg2://'
 if DATABASE_URL.startswith("postgresql://"):
